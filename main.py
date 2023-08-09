@@ -16,6 +16,17 @@ resultImg = requests.get(image_url)
 with open(image_file, "wb") as file:
     file.write(resultImg.content)
 
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
+
 st.title("Astronomy Image of the Day")
+st.write(f"**{title}**")
 st.image(image_file)
 st.write(explanation)
+st.write("Have a good day!")
+st.write("Regards, Keerthana 😊")
