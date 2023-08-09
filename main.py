@@ -19,6 +19,7 @@ with open(image_file, "wb") as file:
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}
+        .stAppWrapper .stDeck [href*="github.com"] {display: none;}
         </style>
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
