@@ -2,15 +2,11 @@ import requests
 import streamlit as st
 import os
 
-apiKey = os.environ.get("API_KEY")
+apiKey = "Be7JiWBAUUgsEBXWrEwEooKX2zCTKMFTFeofLWht"
 url = f"https://api.nasa.gov/planetary/apod?api_key={apiKey}"
-
-print(os.environ.get("API_KEY"))
 
 response = requests.get(url)
 data = response.json()
-
-print("DATA---", data)
 
 title = data["title"]
 image_url = data["url"]
