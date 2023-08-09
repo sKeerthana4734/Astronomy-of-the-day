@@ -23,5 +23,5 @@ jobs:
 
       - name: Deploy website
         env:
-          apiKey: ${{ secrets.APIKEY }}
+          apiKey: ${{ vars.APIKEY }}
         run: python main.py
