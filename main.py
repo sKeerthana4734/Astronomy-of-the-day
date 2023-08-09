@@ -4,10 +4,13 @@ import os
 
 apiKey = os.environ.get("API_KEY")
 url = f"https://api.nasa.gov/planetary/apod?api_key={apiKey}"
-print(apiKey, url)
+
+print(os.environ.get("API_KEY"))
 
 response = requests.get(url)
 data = response.json()
+
+print("DATA---", data)
 
 title = data["title"]
 image_url = data["url"]
