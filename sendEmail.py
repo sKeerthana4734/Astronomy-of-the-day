@@ -2,13 +2,14 @@ import smtplib
 import ssl
 import requests
 import datetime
+import os
 
 
 def send_email():
     host = "smtp.gmail.com"
     port = 465
-    username = "pythonemailsending561@gmail.com"
-    password = "nrceqycdpfwdcvae"
+    username = os.environ.get("EMAIL")
+    password = os.environ.get("PASSWORD")
     receiver = ["skeerthana4734@gmail.com", "keerthukeerthana4734@gmail.com"]
     message = (
         f"Subject: Astronomy Image of the day - {str(todayDate)}"
