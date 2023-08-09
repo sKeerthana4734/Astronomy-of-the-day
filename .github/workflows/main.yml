@@ -21,4 +21,3 @@ jobs:
             - name: Deploy website
               env:
                   API_KEY: ${{ secrets.API_KEY }} # Pass the secret to the environment
-              run: python main.py
