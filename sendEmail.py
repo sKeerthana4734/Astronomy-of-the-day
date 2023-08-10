@@ -34,7 +34,7 @@ def send_email():
 
 todayDate = datetime.date.today()
 link = "https://astronomy-image-of-the-day.streamlit.app/"
-apiKey = "Be7JiWBAUUgsEBXWrEwEooKX2zCTKMFTFeofLWht"
+apiKey = os.environ.get("API_KEY")
 url = f"https://api.nasa.gov/planetary/apod?api_key={apiKey}"
 
 response = requests.get(url)
